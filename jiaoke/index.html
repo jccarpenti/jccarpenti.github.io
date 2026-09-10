@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>娇客-古典雅致生活方式与东方美学指南</title>
+<meta name="description" content="娇客是一个专注东方古典美学与雅致生活方式的平台，提供诗词文化、香道茶事、汉服妆造、园林雅集等内容的阅读与参考，帮助读者在快节奏生活中寻找从容优雅的生活节奏。">
+<meta name="keywords" content="娇客,东方美学,古典生活,香道,茶事,汉服,诗词文化,雅致生活">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+  :root{
+    --ink:#2b2520;
+    --ink-soft:#5c534a;
+    --paper:#faf6f0;
+    --paper-deep:#f2ebe1;
+    --line:#e0d5c6;
+    --accent:#9a3b34;
+    --accent-soft:#c07a6f;
+    --jade:#5f7a6a;
+    --gold:#b08d4f;
+    --radius:14px;
+    --shadow:0 6px 24px rgba(80,60,40,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Songti SC","STSong","Noto Serif SC",Georgia,"Microsoft YaHei",serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{width:min(1180px,92%);margin:0 auto;}
+
+  /* ---------- 顶栏 ---------- */
+  .topbar{
+    background:var(--ink);
+    color:#e8dfd2;
+    font-size:13px;
+    letter-spacing:.5px;
+  }
+  .topbar .wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:38px;
+    flex-wrap:wrap;
+  }
+  .topbar span{opacity:.85;}
+  .topbar .top-links a{margin-left:18px;opacity:.8;transition:.2s;}
+  .topbar .top-links a:hover{opacity:1;color:var(--gold);}
+
+  /* ---------- 页眉 ---------- */
+  header.site-head{
+    background:linear-gradient(180deg,#fdfaf5 0%,#f7f1e8 100%);
+    border-bottom:1px solid var(--line);
+    position:sticky;
+    top:0;
+    z-index:50;
+    backdrop-filter:blur(6px);
+  }
+  .head-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:78px;
+    gap:20px;
+  }
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand .seal{
+    width:44px;height:44px;
+    background:var(--accent);
+    color:#fff;
+    border-radius:8px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:2px;
+    box-shadow:0 4px 12px rgba(154,59,52,.3);
+  }
+  .brand-text b{
+    font-size:22px;
+    letter-spacing:4px;
+    display:block;
+    line-height:1.2;
+  }
+  .brand-text small{
+    font-size:12px;
+    color:var(--ink-soft);
+    letter-spacing:2px;
+  }
+  nav.main-nav ul{
+    display:flex;
+    gap:6px;
+    list-style:none;
+  }
+  nav.main-nav a{
+    display:block;
+    padding:8px 15px;
+    font-size:15px;
+    color:var(--ink-soft);
+    border-radius:20px;
+    transition:.25s;
+    letter-spacing:1px;
+  }
+  nav.main-nav a:hover,
+  nav.main-nav a.active{
+    background:var(--accent);
+    color:#fff;
+  }
+  .menu-toggle{
+    display:none;
+    background:none;
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:8px 12px;
+    font-size:18px;
+    color:var(--ink);
+    cursor:pointer;
+  }
+
+  /* ---------- 首屏 ---------- */
+  .hero{
+    position:relative;
+    background:
+      radial-gradient(circle at 82% 18%,rgba(176,141,79,.16),transparent 55%),
+      radial-gradient(circle at 12% 80%,rgba(95,122,106,.14),transparent 50%),
+      var(--paper-deep);
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .hero::after{
+    content:"娇";
+    position:absolute;
+    right:-30px;
+    bottom:-90px;
+    font-size:340px;
+    font-weight:700;
+    color:rgba(154,59,52,.05);
+    line-height:1;
+    pointer-events:none;
+    user-select:none;
+  }
+  .hero-inner{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:48px;
+    padding:72px 0 68px;
+    align-items:center;
+  }
+  .hero-copy .tag{
+    display:inline-block;
+    font-size:13px;
+    letter-spacing:3px;
+    color:var(--accent);
+    border:1px solid var(--accent-soft);
+    border-radius:30px;
+    padding:5px 16px;
+    margin-bottom:22px;
+  }
+  .hero-copy h1{
+    font-size:clamp(30px,4.4vw,50px);
+    line-height:1.35;
+    letter-spacing:3px;
+    margin-bottom:20px;
+    font-weight:700;
+  }
+  .hero-copy h1 em{
+    font-style:normal;
+    color:var(--accent);
+    border-bottom:3px solid rgba(154,59,52,.25);
+  }
+  .hero-copy p{
+    font-size:16.5px;
+    color:var(--ink-soft);
+    max-width:560px;
+    margin-bottom:30px;
+  }
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;
+    padding:12px 30px;
+    border-radius:30px;
+    font-size:15px;
+    letter-spacing:2px;
+    transition:.25s;
+    cursor:pointer;
+    border:1px solid transparent;
+  }
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(154,59,52,.28);}
+  .btn-primary:hover{background:#832f29;transform:translateY(-2px);}
+  .btn-ghost{border-color:var(--accent-soft);color:var(--accent);}
+  .btn-ghost:hover{background:rgba(154,59,52,.07);}
+
+  .hero-aside{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:28px 26px;
+    box-shadow:var(--shadow);
+  }
+  .hero-aside h2{
+    font-size:17px;
+    letter-spacing:3px;
+    color:var(--accent);
+    padding-bottom:14px;
+    border-bottom:1px dashed var(--line);
+    margin-bottom:16px;
+  }
+  .hero-aside ul{list-style:none;}
+  .hero-aside li{
+    display:flex;
+    gap:12px;
+    padding:11px 0;
+    border-bottom:1px dashed #efe7db;
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+  .hero-aside li:last-child{border-bottom:none;}
+  .hero-aside li i{
+    font-style:normal;
+    color:var(--gold);
+    font-weight:700;
+    flex-shrink:0;
+  }
+
+  /* ---------- 通用区块 ---------- */
+  section{padding:64px 0;}
+  .sec-head{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:20px;
+    margin-bottom:36px;
+    flex-wrap:wrap;
+  }
+  .sec-head h2{
+    font-size:26px;
+    letter-spacing:3px;
+    position:relative;
+    padding-left:16px;
+  }
+  .sec-head h2::before{
+    content:"";
+    position:absolute;
+    left:0;top:50%;
+    transform:translateY(-50%);
+    width:5px;height:24px;
+    background:var(--accent);
+    border-radius:3px;
+  }
+  .sec-head p{
+    font-size:14px;
+    color:var(--ink-soft);
+    max-width:640px;
+  }
+  .sec-head .more{
+    font-size:14px;
+    color:var(--accent);
+    letter-spacing:1px;
+    white-space:nowrap;
+  }
+  .sec-head .more:hover{text-decoration:underline;}
+
+  /* ---------- 分类导航 ---------- */
+  .cat-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:16px;
+  }
+  .cat-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:24px 16px;
+    text-align:center;
+    transition:.28s;
+    display:block;
+  }
+  .cat-card:hover{
+    transform:translateY(-5px);
+    border-color:var(--accent-soft);
+    box-shadow:var(--shadow);
+  }
+  .cat-card .glyph{
+    font-size:26px;
+    display:block;
+    margin-bottom:10px;
+    color:var(--accent);
+  }
+  .cat-card b{
+    display:block;
+    font-size:16px;
+    letter-spacing:2px;
+    margin-bottom:6px;
+  }
+  .cat-card small{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    line-height:1.6;
+    display:block;
+  }
+
+  /* ---------- 主题内容 ---------- */
+  .topic-layout{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:26px;
+  }
+  .topic{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:30px 30px 26px;
+    position:relative;
+    overflow:hidden;
+    transition:.28s;
+  }
+  .topic:hover{box-shadow:var(--shadow);border-color:#e6d9c8;}
+  .topic .num{
+    position:absolute;
+    top:14px;right:22px;
+    font-size:52px;
+    font-weight:700;
+    color:rgba(154,59,52,.07);
+    line-height:1;
+  }
+  .topic h3{
+    font-size:20px;
+    letter-spacing:2px;
+    margin-bottom:10px;
+  }
+  .topic .sub{
+    font-size:13px;
+    color:var(--gold);
+    letter-spacing:2px;
+    margin-bottom:14px;
+  }
+  .topic p{
+    font-size:14.5px;
+    color:var(--ink-soft);
+    margin-bottom:16px;
+  }
+  .topic ul{list-style:none;font-size:14px;color:var(--ink-soft);}
+  .topic ul li{
+    padding:6px 0 6px 18px;
+    position:relative;
+    border-bottom:1px dashed #f0e9de;
+  }
+  .topic ul li:last-child{border-bottom:none;}
+  .topic ul li::before{
+    content:"·";
+    position:absolute;
+    left:4px;
+    color:var(--accent);
+    font-weight:700;
+  }
+
+  /* ---------- 精选阅读 ---------- */
+  .read-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+  }
+  .read-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:.28s;
+  }
+  .read-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);}
+  .read-thumb{
+    height:130px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    letter-spacing:6px;
+    color:#fff;
+    font-weight:700;
+  }
+  .t1{background:linear-gradient(135deg,#9a3b34,#c07a6f);}
+  .t2{background:linear-gradient(135deg,#5f7a6a,#8aa694);}
+  .t3{background:linear-gradient(135deg,#b08d4f,#d3b57e);}
+  .t4{background:linear-gradient(135deg,#4f5d75,#8291a8);}
+  .t5{background:linear-gradient(135deg,#7a5c4f,#a98b7c);}
+  .t6{background:linear-gradient(135deg,#6a5f8a,#9c92bb);}
+  .read-body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1;}
+  .read-body .meta{
+    font-size:12.5px;
+    color:var(--gold);
+    letter-spacing:1.5px;
+    margin-bottom:10px;
+  }
+  .read-body h3{
+    font-size:17.5px;
+    letter-spacing:1.5px;
+    margin-bottom:10px;
+    line-height:1.5;
+  }
+  .read-body p{
+    font-size:14px;
+    color:var(--ink-soft);
+    flex:1;
+    margin-bottom:14px;
+  }
+  .read-body .link{
+    font-size:13.5px;
+    color:var(--accent);
+    letter-spacing:1px;
+  }
+  .read-body .link:hover{text-decoration:underline;}
+
+  /* ---------- 建议清单 ---------- */
+  .guide{
+    background:var(--paper-deep);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .guide-layout{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:46px;
+    align-items:start;
+  }
+  .guide-intro h2{
+    font-size:26px;
+    letter-spacing:3px;
+    margin-bottom:18px;
+    padding-left:16px;
+    position:relative;
+  }
+  .guide-intro h2::before{
+    content:"";
+    position:absolute;left:0;top:50%;transform:translateY(-50%);
+    width:5px;height:24px;background:var(--accent);border-radius:3px;
+  }
+  .guide-intro p{
+    font-size:15px;
+    color:var(--ink-soft);
+    margin-bottom:16px;
+  }
+  .guide-intro .note{
+    font-size:13.5px;
+    color:var(--jade);
+    background:rgba(95,122,106,.09);
+    border-left:3px solid var(--jade);
+    padding:12px 16px;
+    border-radius:0 8px 8px 0;
+  }
+  .steps{list-style:none;counter-reset:step;}
+  .steps li{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px 22px 20px 66px;
+    position:relative;
+    margin-bottom:14px;
+    transition:.25s;
+  }
+  .steps li:hover{border-color:var(--accent-soft);box-shadow:var(--shadow);}
+  .steps li::before{
+    counter-increment:step;
+    content:counter(step,decimal-leading-zero);
+    position:absolute;
+    left:20px;top:20px;
+    font-size:15px;
+    font-weight:700;
+    color:#fff;
+    background:var(--accent);
+    width:32px;height:32px;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    letter-spacing:0;
+  }
+  .steps li b{
+    display:block;
+    font-size:16px;
+    letter-spacing:1.5px;
+    margin-bottom:6px;
+  }
+  .steps li span{
+    font-size:14px;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- 常见问题 ---------- */
+  .faq-list{max-width:880px;margin:0 auto;}
+  .faq-item{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    margin-bottom:14px;
+    overflow:hidden;
+  }
+  .faq-q{
+    width:100%;
+    text-align:left;
+    background:none;
+    border:none;
+    padding:20px 24px;
+    font-size:16.5px;
+    letter-spacing:1.5px;
+    font-family:inherit;
+    color:var(--ink);
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+  }
+  .faq-q::after{
+    content:"＋";
+    color:var(--accent);
+    font-size:18px;
+    transition:.3s;
+    flex-shrink:0;
+  }
+  .faq-item.open .faq-q::after{content:"－";}
+  .faq-a{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .35s ease;
+  }
+  .faq-a p{
+    padding:0 24px 22px;
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+  .faq-item.open .faq-a{max-height:320px;}
+
+  /* ---------- 订阅条 ---------- */
+  .subscribe{
+    background:var(--ink);
+    color:#f0e7da;
+    border-radius:var(--radius);
+    padding:44px 46px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+    flex-wrap:wrap;
+  }
+  .subscribe h2{
+    font-size:22px;
+    letter-spacing:3px;
+    margin-bottom:8px;
+  }
+  .subscribe p{font-size:14px;opacity:.75;max-width:520px;}
+  .sub-form{display:flex;gap:10px;flex-wrap:wrap;}
+  .sub-form input{
+    padding:12px 18px;
+    border-radius:30px;
+    border:1px solid rgba(255,255,255,.25);
+    background:rgba(255,255,255,.08);
+    color:#fff;
+    font-size:14px;
+    min-width:230px;
+    font-family:inherit;
+    outline:none;
+  }
+  .sub-form input::placeholder{color:rgba(255,255,255,.5);}
+  .sub-form input:focus{border-color:var(--gold);}
+  .sub-form button{
+    padding:12px 28px;
+    border-radius:30px;
+    border:none;
+    background:var(--gold);
+    color:#2b2520;
+    font-size:14.5px;
+    letter-spacing:2px;
+    font-family:inherit;
+    cursor:pointer;
+    transition:.25s;
+  }
+  .sub-form button:hover{background:#c8a463;}
+
+  /* ---------- 页脚 ---------- */
+  footer.site-foot{
+    background:#241f1b;
+    color:#b9aea0;
+    padding:52px 0 26px;
+    font-size:14px;
+  }
+  .foot-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1fr;
+    gap:34px;
+    padding-bottom:34px;
+    border-bottom:1px solid rgba(255,255,255,.09);
+  }
+  .foot-brand b{
+    color:#f0e7da;
+    font-size:20px;
+    letter-spacing:4px;
+    display:block;
+    margin-bottom:12px;
+  }
+  .foot-brand p{font-size:13.5px;line-height:1.9;opacity:.75;}
+  .foot-col h4{
+    color:#e8dfd2;
+    font-size:15px;
+    letter-spacing:2px;
+    margin-bottom:16px;
+    font-weight:600;
+  }
+  .foot-col ul{list-style:none;}
+  .foot-col li{margin-bottom:10px;}
+  .foot-col a{font-size:13.5px;opacity:.75;transition:.2s;}
+  .foot-col a:hover{opacity:1;color:var(--gold);}
+  .foot-bottom{
+    padding-top:22px;
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+    font-size:13px;
+    opacity:.65;
+  }
+
+  /* ---------- 响应式 ---------- */
+  @media (max-width:1024px){
+    .cat-grid{grid-template-columns:repeat(3,1fr);}
+    .read-grid{grid-template-columns:repeat(2,1fr);}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:860px){
+    .hero-inner{grid-template-columns:1fr;gap:34px;padding:52px 0;}
+    .hero::after{font-size:220px;bottom:-60px;}
+    .topic-layout{grid-template-columns:1fr;}
+    .guide-layout{grid-template-columns:1fr;gap:30px;}
+    nav.main-nav{
+      display:none;
+      position:absolute;
+      top:78px;left:0;right:0;
+      background:#fdfaf5;
+      border-bottom:1px solid var(--line);
+      box-shadow:0 10px 24px rgba(80,60,40,.08);
+    }
+    nav.main-nav.open{display:block;}
+    nav.main-nav ul{flex-direction:column;gap:0;padding:10px 0;}
+    nav.main-nav a{border-radius:0;padding:13px 24px;}
+    .menu-toggle{display:block;}
+    header.site-head{position:relative;}
+    .subscribe{padding:32px 26px;}
+  }
+  @media (max-width:640px){
+    .cat-grid{grid-template-columns:repeat(2,1fr);}
+    .read-grid{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr;}
+    section{padding:48px 0;}
+    .sec-head h2{font-size:22px;}
+    .topbar .top-links{display:none;}
+    .sub-form input{min-width:100%;}
+    .sub-form{width:100%;}
+    .sub-form button{width:100%;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>以东方美学为尺，度一段从容生活</span>
+    <div class="top-links">
+      <a href="#topics">主题</a>
+      <a href="#reading">精选阅读</a>
+      <a href="#guide">入门建议</a>
+      <a href="#faq">常见问题</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="#top">
+      <span class="seal">娇</span>
+      <span class="brand-text">
+        <b>娇客</b>
+        <small>东方雅致生活志</small>
+      </span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="展开导航">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="#top" class="active">首页</a></li>
+        <li><a href="#topics">主题</a></li>
+        <li><a href="#reading">精选阅读</a></li>
+        <li><a href="#guide">入门建议</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <span class="tag">东 方 美 学 · 生 活 参 考</span>
+        <h1>娇客，是懂得在寻常日子里<em>安顿自己</em>的人</h1>
+        <p>“娇客”一词在传统语境中常指受珍视的来客，也泛指姿态美好、气质温婉之人。本站以此为名，整理与东方雅致生活相关的文化常识、审美取向与实践方法，涵盖诗词、香事、茶事、服饰妆造、园林雅集等方向，为希望放慢节奏、提升生活质感的读者提供可读、可用、可查的内容参考。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#topics">浏览主题</a>
+          <a class="btn btn-ghost" href="#guide">从何入手</a>
+        </div>
+      </div>
+      <aside class="hero-aside">
+        <h2>本期导读</h2>
+        <ul>
+          <li><i>壹</i><span>从“娇客”一词的语源说起，理解它在今日语境中的延伸含义</span></li>
+          <li><i>贰</i><span>香、茶、花、服：四条最容易上手的东方生活线索</span></li>
+          <li><i>叁</i><span>不追求复古表演，只求日常可用的一点点讲究</span></li>
+          <li><i>肆</i><span>入门常见误区与理性消费提示，避免盲目跟风</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 分类 -->
+  <section id="cats">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>内容方向</h2>
+          <p>围绕东方雅致生活展开的六个常设栏目，内容以文化常识、实践方法与审美参考为主，不涉及具体商品推荐与价格信息。</p>
+        </div>
+      </div>
+      <div class="cat-grid">
+        <a class="cat-card" href="#topics">
+          <span class="glyph">诗</span>
+          <b>诗词文心</b>
+          <small>古典诗词与文辞赏析，理解含蓄表达之美</small>
+        </a>
+        <a class="cat-card" href="#topics">
+          <span class="glyph">香</span>
+          <b>香事入门</b>
+          <small>香材常识、品香方式与居家用香注意</small>
+        </a>
+        <a class="cat-card" href="#topics">
+          <span class="glyph">茶</span>
+          <b>茶事茶器</b>
+          <small>六大茶类基础、冲泡要点与器物搭配</small>
+        </a>
+        <a class="cat-card" href="#topics">
+          <span class="glyph">衣</span>
+          <b>服章妆造</b>
+          <small>传统服饰形制常识与日常化穿搭思路</small>
+        </a>
+        <a class="cat-card" href="#reading">
+          <span class="glyph">园</span>
+          <b>园林雅集</b>
+          <small>古典园林审美与小型雅集的筹备参考</small>
+        </a>
+        <a class="cat-card" href="#guide">
+          <span class="glyph">习</span>
+          <b>修习建议</b>
+          <small>循序渐进的入门路径与常见误区提醒</small>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主题 -->
+  <section id="topics" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>四个主题，四条线索</h2>
+          <p>东方生活美学并不神秘，它往往落在很具体的小事上：一炉香怎么点，一泡茶怎么注水，一件衣服怎么穿得自然。以下四个主题是本站内容的主干。</p>
+        </div>
+      </div>
+      <div class="topic-layout">
+        <article class="topic">
+          <span class="num">01</span>
+          <h3>诗词与文心</h3>
+          <div class="sub">读得进去，才谈得上喜欢</div>
+          <p>古典诗词的价值不只在背诵，更在于它提供了一套含蓄、节制的表达方式。理解意象、典故与格律的基本常识，能让阅读从“看不懂”变成“有共鸣”。</p>
+          <ul>
+            <li>从熟悉的唐诗宋词入手，先建立语感</li>
+            <li>了解常见意象：月、柳、舟、雁、酒</li>
+            <li>不必强求逐字翻译，先感受节奏与画面</li>
+          </ul>
+        </article>
+
+        <article class="topic">
+          <span class="num">02</span>
+          <h3>香事与茶事</h3>
+          <div class="sub">气息与滋味，是最日常的审美</div>
+          <p>品香与饮茶是门槛相对较低的东方生活实践。它们不需要昂贵的器物，却对耐心和专注有一定要求，也因此成为很多人调整生活节奏的起点。</p>
+          <ul>
+            <li>香：区分线香、盘香、香粉等常见形态</li>
+            <li>茶：了解绿茶、乌龙、红茶的基本差异</li>
+            <li>注意通风、控制用量，保持适度即可</li>
+          </ul>
+        </article>
+
+        <article class="topic">
+          <span class="num">03</span>
+          <h3>服章与妆造</h3>
+          <div class="sub">先合身，再谈风格</div>
+          <p>传统服饰形制有其历史脉络，日常穿着时更应关注舒适度、场合适配与整体协调，而非一味追求形制考据或视觉夸张。</p>
+          <ul>
+            <li>认识交领、圆领、褙子等基础形制概念</li>
+            <li>日常化搭配可从单品混搭开始尝试</li>
+            <li>尊重历史，也尊重自己的穿着体验</li>
+          </ul>
+        </article>
+
+        <article class="topic">
+          <span class="num">04</span>
+          <h3>园林与雅集</h3>
+          <div class="sub">空间与人的相处方式</div>
+          <p>古典园林讲究借景、对景与步移景异，本质是在有限空间里制造层次与留白。小型雅集的筹备，同样可以借鉴这种“少而有序”的思路。</p>
+          <ul>
+            <li>理解框景、漏窗、曲径等基本造园手法</li>
+            <li>雅集重氛围与秩序，不在规模大小</li>
+            <li>提前确认场地、时间与参与者的舒适度</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 精选阅读 -->
+  <section id="reading">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>精选阅读</h2>
+          <p>以下为本站常设的阅读专题方向，内容以知识梳理与方法说明为主，帮助读者建立自己的判断标准。</p>
+        </div>
+        <a class="more" href="#faq">查看常见问题 →</a>
+      </div>
+      <div class="read-grid">
+        <article class="read-card">
+          <div class="read-thumb t1">诗</div>
+          <div class="read-body">
+            <div class="meta">诗词文心</div>
+            <h3>为什么古人写离别总爱提“柳”</h3>
+            <p>从“柳”与“留”的谐音说起，梳理折柳送别这一习俗在诗词中的常见用法，帮助读者理解意象背后的情感逻辑。</p>
+            <a class="link" href="#topics">阅读方向 →</a>
+          </div>
+        </article>
+
+        <article class="read-card">
+          <div class="read-thumb t2">茶</div>
+          <div class="read-body">
+            <div class="meta">茶事茶器</div>
+            <h3>新手泡茶，先弄清水温和投茶量</h3>
+            <p>水温过高容易苦涩，投茶过多则滋味过浓。整理不同茶类的大致冲泡区间，作为日常练习的参考起点。</p>
+            <a class="link" href="#topics">阅读方向 →</a>
+          </div>
+        </article>
+
+        <article class="read-card">
+          <div class="read-thumb t3">香</div>
+          <div class="read-body">
+            <div class="meta">香事入门</div>
+            <h3>居家用香，通风比香材更重要</h3>
+            <p>无论使用哪种香品，保持空间通风、控制单次用量、避免长时间密闭燃烧，都是最基本也最容易被忽略的常识。</p>
+            <a class="link" href="#topics">阅读方向 →</a>
+          </div>
+        </article>
+
+        <article class="read-card">
+          <div class="read-thumb t4">衣</div>
+          <div class="read-body">
+            <div class="meta">服章妆造</div>
+            <h3>传统服饰日常化，从一件单品开始</h3>
+            <p>不必整套穿戴，一件立领上衣、一条马面裙式半裙，都可以与现代服装搭配，降低尝试门槛。</p>
+            <a class="link" href="#topics">阅读方向 →</a>
+          </div>
+        </article>
+
+        <article class="read-card">
+          <div class="read-thumb t5">园</div>
+          <div class="read-body">
+            <div class="meta">园林雅集</div>
+            <h3>逛园林时，不妨先看“框”再看“景”</h3>
+            <p>门洞、漏窗、廊柱都是取景框。学会观察这些结构，能让游园从走马观花变成有层次的观看体验。</p>
+            <a class="link" href="#topics">阅读方向 →</a>
+          </div>
+        </article>
+
+        <article class="read-card">
+          <div class="read-thumb t6">习</div>
+          <div class="read-body">
+            <div class="meta">修习建议</div>
+            <h3>别急着置办器物，先培养使用习惯</h3>
+            <p>很多人从购买开始，最后器物闲置。更稳妥的顺序是：先了解、再练习、确认需要，最后才考虑添置。</p>
+            <a class="link" href="#guide">阅读方向 →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 入门建议 -->
+  <section class="guide" id="guide">
+    <div class="wrap guide-layout">
+      <div class="guide-intro">
+        <h2>从何入手</h2>
+        <p>如果你对东方雅致生活感兴趣，却不知道从哪里开始，可以按下面的顺序慢慢来。重点不在于快速掌握，而在于找到真正让自己舒服的那一部分。</p>
+        <p>需要说明的是，本站不提供任何商品销售、价格比较或机构推荐，所有内容均为文化与生活方式的常识性整理，具体选择请结合自身情况判断。</p>
+        <div class="note">理性提示：香品燃烧会产生烟雾，请保持通风；茶饮需注意个人体质与饮用习惯；传统服饰的选择以舒适、合身、适合场合为先。</div>
+      </div>
+      <ol class="steps">
+        <li>
+          <b>先读，后买</b>
+          <span>通过阅读了解基本概念与常见形态，建立初步判断力，再决定是否投入时间与费用。</span>
+        </li>
+        <li>
+          <b>选一个方向深入</b>
+          <span>香、茶、诗词、服饰，任选其一先做一段时间，比同时铺开更容易形成真实体验。</span>
+        </li>
+        <li>
+          <b>用日常场景练习</b>
+          <span>把练习放进真实生活，比如周末泡一壶茶、睡前读一首诗，而不是专门制造仪式感。</span>
+        </li>
+        <li>
+          <b>记录感受，调整节奏</b>
+          <span>记下哪些方式让你放松、哪些让你疲惫，据此调整，不必照搬他人的标准流程。</span>
+        </li>
+        <li>
+          <b>保持开放与克制</b>
+          <span>尊重不同流派与个人偏好，也警惕过度消费与形式主义，让爱好服务于生活本身。</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 常见问题 -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>常见问题</h2>
+          <p>整理读者在了解东方雅致生活时较常提出的疑问，回答以稳妥、通用为原则。</p>
+        </div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" type="button">“娇客”具体指什么？</button>
+          <div class="faq-a">
+            <p>“娇客”在传统文献中用法并不单一，常用来指代受珍视的客人，也可泛指姿态美好之人。本站取其温婉、讲究、被珍视的意味，作为东方雅致生活内容的名称，并非某一固定历史称谓的专属定义。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">完全没有基础，可以了解这些内容吗？</button>
+          <div class="faq-a">
+            <p>可以。本站内容以常识性介绍和方法说明为主，不预设专业背景。建议从一个自己最有兴趣的方向开始，例如先了解茶类的基本分类，或先读几首熟悉的诗词，循序渐进即可。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">需要购买很多器物才能开始吗？</button>
+          <div class="faq-a">
+            <p>不需要。很多实践可以从日常用品起步，例如用普通杯子练习冲泡、用现有空间保持通风。本站不推荐具体品牌与价格，也不建议在了解不足时大量购置器物。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">传统服饰日常穿会不会不合适？</button>
+          <div class="faq-a">
+            <p>是否合适主要取决于场合与搭配方式。正式场合可参考相应礼仪要求，日常场景则可从单品混搭入手，以舒适、整洁、协调为基本标准，不必追求完整复刻。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">本站内容会涉及商品推荐吗？</button>
+          <div class="faq-a">
+            <p>本站以文化与生活方式知识为主，不提供商品销售、价格比较或购买引导。涉及香材、茶器、服饰等内容时，仅作常识性说明，具体选择请读者自行判断。</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">用香、饮茶有什么需要注意的地方？</button>
+          <div class="faq-a">
+            <p>用香时应保持空间通风，控制单次用量，避免长时间在密闭环境中燃烧；饮茶需结合个人体质与作息，避免空腹或睡前大量饮用浓茶。如有健康方面的疑问，建议咨询专业人士。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 订阅 -->
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="subscribe">
+        <div>
+          <h2>订阅内容更新提醒</h2>
+          <p>留下邮箱，我们会在新增专题或更新内容时发送简要提醒。仅用于内容通知，不作他用。</p>
+        </div>
+        <form class="sub-form" id="subForm" novalidate>
+          <input type="email" id="subEmail" placeholder="请输入邮箱地址" aria-label="邮箱地址">
+          <button type="submit">提交订阅</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <b>娇客</b>
+        <p>一个围绕东方古典美学与雅致生活方式的内容站点，整理诗词、香事、茶事、服章、园林等方向的文化常识与实践参考，供读者阅读与查阅。</p>
+      </div>
+      <div class="foot-col">
+        <h4>内容栏目</h4>
+        <ul>
+          <li><a href="#topics">诗词文心</a></li>
+          <li><a href="#topics">香事入门</a></li>
+          <li><a href="#topics">茶事茶器</a></li>
+          <li><a href="#topics">服章妆造</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>阅读指引</h4>
+        <ul>
+          <li><a href="#reading">精选阅读</a></li>
+          <li><a href="#guide">入门建议</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>关于本站</h4>
+        <ul>
+          <li><a href="#top">站点定位</a></li>
+          <li><a href="#guide">内容原则</a></li>
+          <li><a href="#faq">理性提示</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 娇客 · 东方雅致生活志</span>
+      <span>内容仅供文化参考，不构成任何购买或健康建议</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var toggle = document.getElementById('menuToggle');
+    var nav = document.getElementById('mainNav');
+    if(toggle && nav){
+      toggle.addEventListener('click', function(){
+        nav.classList.toggle('open');
+      });
+      nav.addEventListener('click', function(e){
+        if(e.target.tagName === 'A'){
+          nav.classList.remove('open');
+        }
+      });
+    }
+
+    var faqBtns = document.querySelectorAll('.faq-q');
+    faqBtns.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var item = btn.parentElement;
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function(el){
+          el.classList.remove('open');
+        });
+        if(!isOpen){
+          item.classList.add('open');
+        }
+      });
+    });
+
+    var form = document.getElementById('subForm');
+    if(form){
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        var input = document.getElementById('subEmail');
+        var val = input ? input.value.trim() : '';
+        var ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+        if(!ok){
+          alert('请输入有效的邮箱地址。');
+          return;
+        }
+        alert('已记录您的订阅意向，感谢关注。');
+        form.reset();
+      });
+    }
+  })();
+</script>
+
+</body>
+  </html>
