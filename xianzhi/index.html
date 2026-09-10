@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>贤知千里-东方智慧人物志与思想解读平台</title>
+<meta name="description" content="贤知千里是一个聚焦东方智慧人物与思想解读的内容平台，梳理先贤生平脉络、经典著作、思想要义与后世影响，帮助读者理解贤者智慧如何穿越千里、照见当下。">
+<meta name="keywords" content="贤知千里,东方智慧,先贤人物,思想解读,经典著作,传统文化,人物志">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+  :root{
+    --ink:#1c2b2a;
+    --ink-soft:#3f5451;
+    --jade:#2f6b5e;
+    --jade-deep:#1f4a41;
+    --gold:#b8893b;
+    --gold-soft:#d9b273;
+    --paper:#f7f4ed;
+    --paper-2:#efe9dc;
+    --line:#ddd4c2;
+    --white:#ffffff;
+    --shadow:0 10px 30px rgba(28,43,42,.08);
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Songti SC","STSong","Noto Serif SC","Source Han Serif SC",Georgia,"Microsoft YaHei",serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{width:min(1180px,92%);margin:0 auto;}
+
+  /* ---------- 页眉 ---------- */
+  .site-header{
+    background:linear-gradient(180deg,#1f4a41 0%,#2f6b5e 100%);
+    color:#f3efe4;
+    border-bottom:3px solid var(--gold);
+    position:relative;
+    overflow:hidden;
+  }
+  .site-header::after{
+    content:"";
+    position:absolute;
+    right:-120px;top:-120px;
+    width:340px;height:340px;
+    border:1px solid rgba(216,178,115,.35);
+    border-radius:50%;
+  }
+  .header-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:20px;padding:18px 0;flex-wrap:wrap;
+    position:relative;z-index:2;
+  }
+  .brand{display:flex;align-items:center;gap:14px;}
+  .brand-seal{
+    width:52px;height:52px;flex:0 0 52px;
+    border:2px solid var(--gold-soft);
+    border-radius:10px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:22px;font-weight:700;letter-spacing:1px;
+    color:var(--gold-soft);
+    background:rgba(0,0,0,.12);
+  }
+  .brand-text h1{
+    font-size:24px;letter-spacing:4px;font-weight:700;line-height:1.3;
+  }
+  .brand-text p{
+    font-size:12px;letter-spacing:2px;color:#c9dcd6;margin-top:2px;
+  }
+  .site-nav{display:flex;gap:6px;flex-wrap:wrap;}
+  .site-nav a{
+    padding:8px 14px;border-radius:999px;
+    font-size:15px;color:#e4efe9;
+    transition:.25s;
+    border:1px solid transparent;
+  }
+  .site-nav a:hover,.site-nav a.active{
+    background:rgba(216,178,115,.16);
+    border-color:rgba(216,178,115,.5);
+    color:#fff;
+  }
+
+  /* ---------- 首屏 ---------- */
+  .hero{
+    background:
+      radial-gradient(circle at 15% 20%,rgba(184,137,59,.10),transparent 55%),
+      linear-gradient(180deg,#efe9dc 0%,#f7f4ed 100%);
+    border-bottom:1px solid var(--line);
+    padding:56px 0 48px;
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.25fr .95fr;gap:44px;align-items:center;
+  }
+  .hero-tag{
+    display:inline-block;font-size:13px;letter-spacing:3px;
+    color:var(--jade);border:1px solid var(--jade);
+    padding:4px 14px;border-radius:999px;margin-bottom:20px;
+  }
+  .hero h2{
+    font-size:clamp(28px,3.6vw,42px);
+    line-height:1.45;letter-spacing:2px;font-weight:700;
+    color:var(--jade-deep);
+  }
+  .hero h2 em{
+    font-style:normal;color:var(--gold);
+    border-bottom:3px solid rgba(184,137,59,.35);
+  }
+  .hero-lead{
+    margin-top:20px;font-size:16.5px;color:var(--ink-soft);
+    max-width:640px;
+  }
+  .hero-actions{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;padding:12px 26px;border-radius:999px;
+    font-size:15px;letter-spacing:1px;transition:.25s;cursor:pointer;
+    border:1px solid transparent;
+  }
+  .btn-primary{background:var(--jade);color:#fff;}
+  .btn-primary:hover{background:var(--jade-deep);transform:translateY(-2px);}
+  .btn-ghost{border-color:var(--jade);color:var(--jade);}
+  .btn-ghost:hover{background:rgba(47,107,94,.08);}
+
+  .hero-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:26px 26px 22px;
+  }
+  .hero-card h3{
+    font-size:16px;letter-spacing:2px;color:var(--jade-deep);
+    padding-bottom:12px;border-bottom:1px dashed var(--line);margin-bottom:14px;
+  }
+  .hero-card ul{list-style:none;}
+  .hero-card li{
+    display:flex;gap:10px;padding:9px 0;font-size:15px;color:var(--ink-soft);
+    border-bottom:1px dotted rgba(221,212,194,.8);
+  }
+  .hero-card li:last-child{border-bottom:none;}
+  .hero-card li span{
+    color:var(--gold);flex:0 0 auto;font-weight:700;
+  }
+
+  /* ---------- 通用区块 ---------- */
+  section{padding:56px 0;}
+  .section-head{
+    display:flex;align-items:flex-end;justify-content:space-between;
+    gap:20px;flex-wrap:wrap;margin-bottom:30px;
+  }
+  .section-head h2{
+    font-size:26px;letter-spacing:3px;color:var(--jade-deep);
+    position:relative;padding-left:18px;
+  }
+  .section-head h2::before{
+    content:"";position:absolute;left:0;top:6px;bottom:6px;width:5px;
+    background:linear-gradient(180deg,var(--gold),var(--jade));
+    border-radius:3px;
+  }
+  .section-head p{font-size:14.5px;color:var(--ink-soft);max-width:560px;}
+
+  /* ---------- 人物卡片 ---------- */
+  .figure-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+  }
+  .figure-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:24px 22px;
+    transition:.28s;
+    display:flex;flex-direction:column;
+    position:relative;
+  }
+  .figure-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+    border-color:var(--gold-soft);
+  }
+  .figure-era{
+    font-size:12.5px;letter-spacing:2px;color:var(--gold);
+    margin-bottom:8px;
+  }
+  .figure-card h3{
+    font-size:19px;letter-spacing:2px;color:var(--jade-deep);margin-bottom:10px;
+  }
+  .figure-card p{
+    font-size:14.5px;color:var(--ink-soft);flex:1;
+  }
+  .figure-meta{
+    margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);
+    font-size:13px;color:#7d8a86;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
+  }
+  .figure-meta b{color:var(--jade);font-weight:600;}
+
+  /* ---------- 思想脉络 ---------- */
+  .thread{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .thread-list{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .thread-item{
+    background:var(--white);
+    border-radius:var(--radius);
+    border:1px solid var(--line);
+    padding:24px 20px;
+    position:relative;
+    overflow:hidden;
+  }
+  .thread-item::before{
+    content:attr(data-step);
+    position:absolute;right:14px;top:6px;
+    font-size:46px;font-weight:700;color:rgba(47,107,94,.08);
+    line-height:1;
+  }
+  .thread-item h3{
+    font-size:17px;color:var(--jade-deep);letter-spacing:1.5px;margin-bottom:10px;
+  }
+  .thread-item p{font-size:14px;color:var(--ink-soft);position:relative;z-index:1;}
+
+  /* ---------- 典籍与解读 ---------- */
+  .reading-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:start;}
+  .reading-main article{
+    background:var(--white);border:1px solid var(--line);
+    border-radius:var(--radius);padding:26px 26px 22px;margin-bottom:20px;
+  }
+  .reading-main article:last-child{margin-bottom:0;}
+  .reading-main h3{
+    font-size:19px;color:var(--jade-deep);letter-spacing:1.5px;margin-bottom:10px;
+  }
+  .reading-main .kicker{
+    font-size:12.5px;letter-spacing:2px;color:var(--gold);margin-bottom:8px;
+  }
+  .reading-main p{font-size:15px;color:var(--ink-soft);}
+  .reading-main blockquote{
+    margin-top:14px;padding:12px 16px;
+    background:rgba(47,107,94,.06);
+    border-left:3px solid var(--jade);
+    font-size:14.5px;color:var(--jade-deep);
+    border-radius:0 8px 8px 0;
+  }
+  .side-panel{
+    background:var(--white);border:1px solid var(--line);
+    border-radius:var(--radius);padding:24px 22px;
+  }
+  .side-panel h3{
+    font-size:17px;color:var(--jade-deep);letter-spacing:2px;
+    padding-bottom:12px;border-bottom:1px dashed var(--line);margin-bottom:14px;
+  }
+  .side-panel ul{list-style:none;}
+  .side-panel li{
+    padding:10px 0;font-size:14.5px;color:var(--ink-soft);
+    border-bottom:1px dotted rgba(221,212,194,.9);
+    display:flex;gap:10px;
+  }
+  .side-panel li:last-child{border-bottom:none;}
+  .side-panel li i{
+    font-style:normal;color:var(--gold);font-weight:700;flex:0 0 auto;
+  }
+
+  /* ---------- 阅读指南 ---------- */
+  .guide{background:linear-gradient(180deg,#1f4a41,#2f6b5e);color:#eaf2ee;}
+  .guide .section-head h2{color:#fff;}
+  .guide .section-head h2::before{background:linear-gradient(180deg,var(--gold-soft),#7fb8a8);}
+  .guide .section-head p{color:#c4d8d1;}
+  .guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .guide-card{
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(216,178,115,.28);
+    border-radius:var(--radius);
+    padding:24px 22px;
+  }
+  .guide-card h3{
+    font-size:17px;color:var(--gold-soft);letter-spacing:1.5px;margin-bottom:10px;
+  }
+  .guide-card p{font-size:14.5px;color:#d5e4de;}
+
+  /* ---------- FAQ ---------- */
+  .faq-list{max-width:900px;margin:0 auto;}
+  .faq-item{
+    background:var(--white);border:1px solid var(--line);
+    border-radius:var(--radius);margin-bottom:14px;overflow:hidden;
+  }
+  .faq-item summary{
+    cursor:pointer;padding:18px 22px;font-size:16.5px;
+    color:var(--jade-deep);letter-spacing:1px;font-weight:600;
+    list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{
+    content:"+";font-size:20px;color:var(--gold);flex:0 0 auto;transition:.25s;
+  }
+  .faq-item[open] summary::after{content:"−";}
+  .faq-item .faq-body{
+    padding:0 22px 20px;font-size:15px;color:var(--ink-soft);
+    border-top:1px dashed var(--line);padding-top:16px;
+  }
+
+  /* ---------- 页脚 ---------- */
+  .site-footer{
+    background:#16241f;color:#9fb3ac;padding:44px 0 26px;font-size:14px;
+  }
+  .footer-grid{
+    display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;
+    padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .footer-grid h4{
+    color:#e6efe9;font-size:15px;letter-spacing:2px;margin-bottom:14px;
+  }
+  .footer-grid p{line-height:1.9;}
+  .footer-grid ul{list-style:none;}
+  .footer-grid li{margin-bottom:8px;}
+  .footer-grid a:hover{color:var(--gold-soft);}
+  .footer-bottom{
+    padding-top:18px;display:flex;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;font-size:13px;color:#7d938c;
+  }
+
+  /* ---------- 响应式 ---------- */
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr;gap:30px;}
+    .figure-grid{grid-template-columns:repeat(2,1fr);}
+    .thread-list{grid-template-columns:repeat(2,1fr);}
+    .reading-grid{grid-template-columns:1fr;}
+    .guide-grid{grid-template-columns:repeat(2,1fr);}
+    .footer-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:620px){
+    .header-inner{padding:14px 0;}
+    .brand-text h1{font-size:20px;letter-spacing:3px;}
+    .site-nav a{padding:6px 11px;font-size:14px;}
+    .hero{padding:38px 0 34px;}
+    section{padding:40px 0;}
+    .figure-grid{grid-template-columns:1fr;}
+    .thread-list{grid-template-columns:1fr;}
+    .guide-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;gap:22px;}
+    .section-head h2{font-size:22px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <div class="brand-seal">贤</div>
+      <div class="brand-text">
+        <h1>贤知千里</h1>
+        <p>东方智慧人物志 · 思想解读</p>
+      </div>
+    </div>
+    <nav class="site-nav" aria-label="主导航">
+      <a href="#figures" class="active">先贤人物</a>
+      <a href="#thread">思想脉络</a>
+      <a href="#reading">典籍解读</a>
+      <a href="#guide">阅读指南</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hero-tag">千里之外 · 智慧可及</span>
+        <h2>让先贤的思想，<br>跨越<em>千里</em>照进当下</h2>
+        <p class="hero-lead">
+          “贤知千里”关注的是那些在时间长河中依然具备解释力的东方智慧。我们以人物为线索，梳理他们的生平处境、核心主张、代表著作与后世影响，把分散在典籍与史料中的信息整理成便于阅读的脉络，帮助读者理解一位贤者为何这样说、这样说又意味着什么。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#figures">浏览先贤人物</a>
+          <a class="btn btn-ghost" href="#guide">了解阅读方法</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="平台内容概览">
+        <h3>平台内容概览</h3>
+        <ul>
+          <li><span>人物</span>按时代与流派整理先贤人物档案</li>
+          <li><span>典籍</span>介绍代表著作的成书背景与结构</li>
+          <li><span>思想</span>提炼核心主张及其内在逻辑</li>
+          <li><span>影响</span>梳理思想在后世的流传与演变</li>
+          <li><span>方法</span>提供循序渐进的阅读与理解路径</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 先贤人物 -->
+  <section id="figures">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>先贤人物</h2>
+        <p>以人物为入口，是最容易进入一种思想的路径。以下条目按不同时代与关切方向组织，每位人物都标注了所处时代、主要关切与代表文献，便于按兴趣延伸阅读。</p>
+      </div>
+      <div class="figure-grid">
+
+        <article class="figure-card">
+          <div class="figure-era">春秋 · 儒家</div>
+          <h3>孔子</h3>
+          <p>以“仁”与“礼”为核心，关注人在关系中的自我修养与社会秩序的建立。其言论由弟子整理成《论语》，以对话形式呈现，读来平实而耐咀嚼。</p>
+          <div class="figure-meta"><span>主要关切：<b>仁 · 礼 · 教化</b></span><span>代表文献：<b>《论语》</b></span></div>
+        </article>
+
+        <article class="figure-card">
+          <div class="figure-era">战国 · 道家</div>
+          <h3>庄子</h3>
+          <p>以寓言与想象展开对自由、认知局限与生命态度的讨论。文字汪洋恣肆，常以荒诞之语逼近真实问题，是理解道家思想不可绕开的一个人物。</p>
+          <div class="figure-meta"><span>主要关切：<b>逍遥 · 齐物 · 自然</b></span><span>代表文献：<b>《庄子》</b></span></div>
+        </article>
+
+        <article class="figure-card">
+          <div class="figure-era">战国 · 儒家</div>
+          <h3>孟子</h3>
+          <p>主张人性本善，强调“义”与“浩然之气”，并把讨论延伸到政治与民生。其论辩气势充沛，善于以比喻和层层追问推进观点。</p>
+          <div class="figure-meta"><span>主要关切：<b>性善 · 仁义 · 民本</b></span><span>代表文献：<b>《孟子》</b></span></div>
+        </article>
+
+        <article class="figure-card">
+          <div class="figure-era">战国 · 法家</div>
+          <h3>韩非</h3>
+          <p>综合前期法家思想，讨论制度、赏罚与治理效率之间的关系。其文逻辑严密、例证丰富，是研究古代政治思想的重要材料。</p>
+          <div class="figure-meta"><span>主要关切：<b>法 · 术 · 势</b></span><span>代表文献：<b>《韩非子》</b></span></div>
+        </article>
+
+        <article class="figure-card">
+          <div class="figure-era">宋代 · 理学</div>
+          <h3>朱熹</h3>
+          <p>对儒家经典进行系统整理与注释，构建起一套影响深远的义理体系。其治学强调循序渐进与格物致知，方法意识尤为突出。</p>
+          <div class="figure-meta"><span>主要关切：<b>理气 · 格致 · 读书法</b></span><span>代表文献：<b>《四书章句集注》</b></span></div>
+        </article>
+
+        <article class="figure-card">
+          <div class="figure-era">明代 · 心学</div>
+          <h3>王阳明</h3>
+          <p>提出“知行合一”与“致良知”，把修养的重心从外在知识拉回到自身的觉察与实践，对后世读书人与行动者都有持久吸引力。</p>
+          <div class="figure-meta"><span>主要关切：<b>心即理 · 知行合一</b></span><span>代表文献：<b>《传习录》</b></span></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 思想脉络 -->
+  <section id="thread" class="thread">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>思想脉络</h2>
+        <p>理解一位贤者，不能只看结论。以下四个步骤，是我们梳理任何一位人物时都会遵循的基本顺序，也可以作为个人阅读时的参考框架。</p>
+      </div>
+      <div class="thread-list">
+        <div class="thread-item" data-step="一">
+          <h3>所处时代</h3>
+          <p>先弄清人物生活的年代、社会结构与主要矛盾。许多主张都是对具体问题的回应，脱离背景容易误读。</p>
+        </div>
+        <div class="thread-item" data-step="二">
+          <h3>核心问题</h3>
+          <p>找出他反复追问的那一两个问题。问题往往比答案更稳定，也更能说明一位思想者的关切所在。</p>
+        </div>
+        <div class="thread-item" data-step="三">
+          <h3>关键概念</h3>
+          <p>梳理他使用的核心词汇，注意这些词在当时语境中的含义，避免直接用现代语义套用古代概念。</p>
+        </div>
+        <div class="thread-item" data-step="四">
+          <h3>后世流变</h3>
+          <p>观察其思想被继承、改造或批评的过程。流传本身也是思想的一部分，能反映出不同时代的关注点。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 典籍解读 -->
+  <section id="reading">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>典籍解读</h2>
+        <p>典籍是思想最直接的载体。我们从成书背景、文本结构与阅读难点三个角度切入，帮助读者在翻开一本书之前，先建立起基本的方位感。</p>
+      </div>
+      <div class="reading-grid">
+
+        <div class="reading-main">
+
+          <article>
+            <div class="kicker">对话体 · 语录汇编</div>
+            <h3>《论语》：从日常对话中读出的分寸感</h3>
+            <p>《论语》并非一部体系严密的论著，而是弟子对孔子言行的记录汇编。它最大的特点是把抽象主张放回具体情境：面对不同的人、不同的场合，同一问题会得到不同的回答。这种“因材施教”的应答方式，本身就是理解儒家思想的一把钥匙。</p>
+            <blockquote>阅读建议：先通读一遍不求甚解，再按主题（如论学、论仁、论政）重新归类，效果往往更好。</blockquote>
+          </article>
+
+          <article>
+            <div class="kicker">寓言体 · 哲理散文</div>
+            <h3>《庄子》：用故事拆解我们习以为常的判断</h3>
+            <p>《庄子》大量使用寓言、重言与卮言，借虚构人物和夸张场景展开讨论。它很少直接给出定义，而是通过对比与反转，让读者自己意识到认知的边界。读《庄子》时，与其急于提炼结论，不如先感受其叙述节奏与想象方式。</p>
+          </article>
+
+          <article>
+            <div class="kicker">语录体 · 心学入门</div>
+            <h3>《传习录》：把道理落回到具体行动上</h3>
+            <p>《传习录》记录了王阳明与弟子、友人的问答，内容涉及读书、为学、处事等多个方面。其突出特点是把“知”与“行”看作一件事，反对把明白道理和实际去做割裂开来。对现代读者而言，这一视角在自我管理与学习实践中仍有参考价值。</p>
+          </article>
+
+        </div>
+
+        <aside class="side-panel">
+          <h3>延伸阅读方向</h3>
+          <ul>
+            <li><i>一</i>先读可靠的今注今译本，建立基本理解</li>
+            <li><i>二</i>配合人物传记，了解文本产生的背景</li>
+            <li><i>三</i>关注同一概念在不同典籍中的用法差异</li>
+            <li><i>四</i>做简单的阅读笔记，记录疑问而非结论</li>
+            <li><i>五</i>与同好交流，检验自己的理解是否站得住</li>
+            <li><i>六</i>隔一段时间重读，往往会有新的体会</li>
+          </ul>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 阅读指南 -->
+  <section id="guide" class="guide">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>阅读指南</h2>
+        <p>面对年代久远、注释繁多的典籍，很多人会在起步阶段感到吃力。以下三点经验，来自长期阅读与整理的观察，供参考。</p>
+      </div>
+      <div class="guide-grid">
+        <div class="guide-card">
+          <h3>先建立框架，再抠细节</h3>
+          <p>初次接触一位人物或一部典籍时，优先了解整体结构与主要议题，不必纠结于个别字句的训释。框架清晰之后，细节才有安放的位置。</p>
+        </div>
+        <div class="guide-card">
+          <h3>允许存在多种解释</h3>
+          <p>经典文本往往历经不同时代的注疏，同一句话可能有多重理解。遇到分歧时，不妨把几种说法并列记录，而不是急于判定谁对谁错。</p>
+        </div>
+        <div class="guide-card">
+          <h3>与自身经验相互印证</h3>
+          <p>思想的生命力在于能否与当下发生关联。阅读时可以有意识地联系自己的工作、学习与人际处境，但也要避免过度附会，保持分寸。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>常见问题</h2>
+        <p>以下是读者在了解“贤知千里”以及阅读传统典籍时较常提出的问题，整理如下。</p>
+      </div>
+      <div class="faq-list">
+
+        <details class="faq-item" open>
+          <summary>“贤知千里”这个名字是什么意思？</summary>
+          <div class="faq-body">
+            “贤知”指贤者的智慧与见识，“千里”取跨越时空、远播流传之意。合起来，是希望表达一种愿望：那些诞生于遥远年代的思考，依然能够跨越距离与时间，被今天的读者理解和运用。平台名称本身不指向某一位具体人物，而是强调一种可被传递的智慧。
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>没有古文基础，可以阅读这些内容吗？</summary>
+          <div class="faq-body">
+            可以。平台的内容以介绍与梳理为主，尽量使用现代汉语表达，并对关键概念作出说明。真正阅读原典时，建议选择带有今注今译的版本，先借助注释理解大意，再逐步过渡到原文。阅读节奏因人而异，不必强求速度。
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>不同人物的思想之间有冲突，应该如何看待？</summary>
+          <div class="faq-body">
+            思想之间的分歧是正常现象，往往源于各自关注的问题不同。例如有的侧重社会秩序，有的侧重个体自由，出发点不同，结论自然有差异。把分歧看作不同视角的并存，比简单地判定优劣更有助于理解。
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>平台内容会涉及历史考据吗？</summary>
+          <div class="faq-body">
+            平台以思想与文本的介绍为主，涉及历史背景时会尽量采用学界较为通行的说法，并保持谨慎表述。对于存在争议的问题，会说明存在不同观点，而不做单一结论式的断言。若需深入研究，建议查阅专业论著与原始文献。
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>如何选择适合自己的入门人物？</summary>
+          <div class="faq-body">
+            可以从自己关心的问题出发：如果关注人际关系与自我修养，可以从儒家人物入手；如果对自由、认知与生命态度更感兴趣，道家人物可能更合适；如果关心制度与治理，法家人物会提供不同的思路。先有兴趣，再谈深入。
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>贤知千里</h4>
+        <p>一个围绕东方智慧人物与思想解读的内容平台，以人物为线索，梳理典籍、概念与后世影响，帮助读者建立属于自己的理解路径。</p>
+      </div>
+      <div>
+        <h4>内容栏目</h4>
+        <ul>
+          <li><a href="#figures">先贤人物</a></li>
+          <li><a href="#thread">思想脉络</a></li>
+          <li><a href="#reading">典籍解读</a></li>
+          <li><a href="#guide">阅读指南</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>阅读方向</h4>
+        <ul>
+          <li><a href="#figures">儒家人物</a></li>
+          <li><a href="#figures">道家人物</a></li>
+          <li><a href="#figures">法家人物</a></li>
+          <li><a href="#figures">理学与心学</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>使用说明</h4>
+        <ul>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#guide">阅读方法</a></li>
+          <li><a href="#reading">文本说明</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>贤知千里 · 东方智慧人物志与思想解读</span>
+      <span>内容仅供学习与交流参考</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var links = document.querySelectorAll('.site-nav a');
+    var sections = [];
+    links.forEach(function(a){
+      var id = a.getAttribute('href');
+      if(id && id.charAt(0) === '#'){
+        var el = document.querySelector(id);
+        if(el){ sections.push({link:a, el:el}); }
+      }
+    });
+    if(!('IntersectionObserver' in window) || sections.length === 0){ return; }
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          sections.forEach(function(item){
+            item.link.classList.toggle('active', item.el === entry.target);
+          });
+        }
+      });
+    }, {rootMargin:'-45% 0px -45% 0px', threshold:0});
+    sections.forEach(function(item){ observer.observe(item.el); });
+  })();
+</script>
+
+</body>
+</html>
