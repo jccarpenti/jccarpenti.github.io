@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>张碧晨 她说-歌曲介绍、歌词意境与演唱版本解析</title>
+<meta name="description" content="围绕张碧晨演唱的《她说》进行系统梳理，介绍歌曲背景、歌词意境、演唱特点、常见版本对比以及收听与翻唱时值得注意的细节，帮助歌迷快速了解这首作品。">
+<meta name="keywords" content="张碧晨 她说,张碧晨,她说,歌曲介绍,歌词意境,翻唱版本,演唱特点">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --ink:#1d1b26;
+  --ink-soft:#4a4658;
+  --muted:#7a7589;
+  --line:#e6e2ee;
+  --bg:#faf8fc;
+  --card:#ffffff;
+  --accent:#7b4bd6;
+  --accent-deep:#5a2fb0;
+  --accent-soft:#f0e9fd;
+  --gold:#c99a2e;
+  --radius:16px;
+  --shadow:0 10px 30px rgba(60,40,110,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{width:min(1160px,92%);margin:0 auto}
+
+/* ---------- 顶部 ---------- */
+header.site-head{
+  position:sticky;top:0;z-index:50;
+  background:rgba(250,248,252,.88);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.head-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;padding:14px 0;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .logo{
+  width:42px;height:42px;border-radius:12px;
+  background:linear-gradient(135deg,var(--accent),#a97bf0);
+  display:grid;place-items:center;
+  color:#fff;font-weight:700;font-size:19px;
+  box-shadow:0 6px 16px rgba(123,75,214,.35);
+}
+.brand h1{font-size:19px;font-weight:700;letter-spacing:.5px}
+.brand p{font-size:12px;color:var(--muted);letter-spacing:1px}
+nav.main-nav ul{display:flex;gap:6px;list-style:none;flex-wrap:wrap}
+nav.main-nav a{
+  display:inline-block;padding:8px 14px;border-radius:999px;
+  font-size:14px;color:var(--ink-soft);transition:.2s;
+}
+nav.main-nav a:hover{background:var(--accent-soft);color:var(--accent-deep)}
+
+/* ---------- 首屏 ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 380px at 82% -10%,rgba(169,123,240,.28),transparent 60%),
+    radial-gradient(700px 340px at 8% 110%,rgba(201,154,46,.16),transparent 62%),
+    linear-gradient(160deg,#241c3a 0%,#3a2a63 52%,#4b3382 100%);
+  color:#fff;
+  padding:64px 0 72px;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);
+  background-size:22px 22px;opacity:.6;pointer-events:none;
+}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.35fr .95fr;gap:44px;align-items:center}
+.hero .tagline{
+  display:inline-block;font-size:13px;letter-spacing:2px;
+  padding:6px 14px;border-radius:999px;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);
+  margin-bottom:20px;
+}
+.hero h2{font-size:clamp(28px,4.4vw,44px);line-height:1.28;font-weight:700;letter-spacing:1px}
+.hero h2 em{font-style:normal;color:#e3d0ff}
+.hero .lead{
+  margin-top:18px;font-size:16px;color:rgba(255,255,255,.82);max-width:640px;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.btn{
+  display:inline-block;padding:12px 26px;border-radius:999px;font-size:15px;
+  font-weight:600;transition:.22s;border:1px solid transparent;
+}
+.btn-primary{background:#fff;color:var(--accent-deep)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.28)}
+.btn-ghost{border-color:rgba(255,255,255,.45);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+.hero-facts{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:var(--radius);
+  padding:24px;backdrop-filter:blur(6px);
+}
+.hero-facts h3{font-size:15px;letter-spacing:1px;color:#e3d0ff;margin-bottom:16px}
+.hero-facts dl{display:grid;grid-template-columns:auto 1fr;gap:10px 16px;font-size:14px}
+.hero-facts dt{color:rgba(255,255,255,.62)}
+.hero-facts dd{color:#fff;font-weight:500}
+
+/* ---------- 通用区块 ---------- */
+section.block{padding:64px 0}
+.sec-head{margin-bottom:34px}
+.sec-head .kicker{
+  font-size:13px;letter-spacing:2px;color:var(--accent);
+  font-weight:600;text-transform:uppercase;display:block;margin-bottom:8px;
+}
+.sec-head h2{font-size:clamp(22px,3vw,30px);font-weight:700;letter-spacing:.5px}
+.sec-head p{margin-top:10px;color:var(--muted);max-width:760px;font-size:15px}
+
+/* ---------- 歌曲速览 ---------- */
+.overview{display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:start}
+.article-card{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);
+}
+.article-card h3{font-size:19px;margin-bottom:14px}
+.article-card p{color:var(--ink-soft);font-size:15px;margin-bottom:14px}
+.article-card p:last-child{margin-bottom:0}
+.side-list{
+  background:linear-gradient(180deg,#fff,#f7f3ff);
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px;box-shadow:var(--shadow);
+}
+.side-list h3{font-size:16px;margin-bottom:16px}
+.side-list ul{list-style:none;display:grid;gap:12px}
+.side-list li{
+  font-size:14px;color:var(--ink-soft);padding-left:18px;position:relative;
+}
+.side-list li::before{
+  content:"";position:absolute;left:0;top:9px;
+  width:7px;height:7px;border-radius:50%;
+  background:var(--accent);opacity:.75;
+}
+
+/* ---------- 歌词意境 ---------- */
+.lyric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.lyric-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px;box-shadow:var(--shadow);transition:.25s;
+}
+.lyric-card:hover{transform:translateY(-4px);border-color:#d9cbf7}
+.lyric-card .num{
+  font-size:13px;font-weight:700;color:var(--accent);
+  letter-spacing:1px;margin-bottom:12px;display:block;
+}
+.lyric-card h3{font-size:17px;margin-bottom:10px}
+.lyric-card p{font-size:14px;color:var(--ink-soft)}
+
+/* ---------- 演唱特点 ---------- */
+.feature-band{
+  background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.feature{
+  padding:24px;border-radius:var(--radius);
+  background:var(--bg);border:1px solid var(--line);
+}
+.feature .icon{
+  width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+  background:var(--accent-soft);color:var(--accent-deep);
+  font-size:20px;font-weight:700;margin-bottom:14px;
+}
+.feature h3{font-size:16px;margin-bottom:8px}
+.feature p{font-size:14px;color:var(--ink-soft)}
+
+/* ---------- 版本对比 ---------- */
+.version-table{
+  width:100%;border-collapse:collapse;background:#fff;
+  border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+  font-size:14.5px;
+}
+.version-table th,.version-table td{
+  padding:16px 18px;text-align:left;border-bottom:1px solid var(--line);
+}
+.version-table th{background:var(--accent-soft);color:var(--accent-deep);font-weight:600;white-space:nowrap}
+.version-table tr:last-child td{border-bottom:none}
+.version-table td{color:var(--ink-soft)}
+.version-table tbody tr:hover{background:#faf7ff}
+
+/* ---------- 收听建议 ---------- */
+.tips{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.tip{
+  display:flex;gap:16px;padding:24px;border-radius:var(--radius);
+  background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);
+}
+.tip .idx{
+  flex:0 0 38px;height:38px;border-radius:10px;
+  background:linear-gradient(135deg,var(--accent),#a97bf0);
+  color:#fff;display:grid;place-items:center;font-weight:700;font-size:15px;
+}
+.tip h3{font-size:16px;margin-bottom:6px}
+.tip p{font-size:14px;color:var(--ink-soft)}
+
+/* ---------- FAQ ---------- */
+.faq{display:grid;gap:14px}
+.faq details{
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:18px 22px;box-shadow:0 4px 14px rgba(60,40,110,.05);
+}
+.faq summary{
+  cursor:pointer;font-weight:600;font-size:15.5px;color:var(--ink);
+  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";font-size:20px;color:var(--accent);font-weight:400;line-height:1;
+}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin-top:12px;font-size:14.5px;color:var(--ink-soft)}
+
+/* ---------- 页脚 ---------- */
+footer.site-foot{
+  background:#221b36;color:rgba(255,255,255,.7);
+  padding:48px 0 26px;margin-top:20px;
+}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px}
+.foot-grid h4{color:#fff;font-size:15px;margin-bottom:14px}
+.foot-grid p,.foot-grid li{font-size:13.5px;line-height:2}
+.foot-grid ul{list-style:none}
+.foot-grid a:hover{color:#c9aefc}
+.foot-bottom{
+  margin-top:34px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);
+  font-size:13px;color:rgba(255,255,255,.5);text-align:center;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:960px){
+  .hero-inner{grid-template-columns:1fr;gap:32px}
+  .overview{grid-template-columns:1fr}
+  .lyric-grid{grid-template-columns:repeat(2,1fr)}
+  .feature-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .head-inner{flex-direction:column;align-items:flex-start;gap:12px}
+  nav.main-nav ul{gap:2px}
+  nav.main-nav a{padding:7px 11px;font-size:13px}
+  .hero{padding:46px 0 54px}
+  section.block{padding:46px 0}
+  .lyric-grid,.feature-grid,.tips{grid-template-columns:1fr}
+  .article-card,.side-list{padding:22px}
+  .version-table{display:block;overflow-x:auto;white-space:nowrap}
+  .foot-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <div class="brand">
+      <div class="logo">她</div>
+      <div>
+        <h1>张碧晨《她说》作品页</h1>
+        <p>SONG · LYRIC · VOICE</p>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a href="#overview">歌曲速览</a></li>
+        <li><a href="#lyric">歌词意境</a></li>
+        <li><a href="#voice">演唱特点</a></li>
+        <li><a href="#version">版本对比</a></li>
+        <li><a href="#listen">收听建议</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="tagline">华语流行 · 女声演绎</span>
+        <h2>张碧晨《她说》：<em>把一首歌，唱成一段独白</em></h2>
+        <p class="lead">
+          《她说》是华语流行中流传度较高的作品，张碧晨的演绎以情绪层次和气息控制见长。
+          这一页把歌曲的基本信息、歌词表达、演唱处理方式、不同版本之间的差异，以及收听与翻唱时容易忽略的细节整理在一起，
+          方便第一次接触这首歌的听众快速建立整体印象，也方便老歌迷对照参考。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#overview">从歌曲速览开始</a>
+          <a class="btn btn-ghost" href="#faq">直接看常见问题</a>
+        </div>
+      </div>
+      <aside class="hero-facts">
+        <h3>内容导航速览</h3>
+        <dl>
+          <dt>作品类型</dt><dd>华语流行抒情歌曲</dd>
+          <dt>演绎者</dt><dd>张碧晨</dd>
+          <dt>关注重点</dt><dd>歌词叙事 · 气息 · 情绪递进</dd>
+          <dt>适合人群</dt><dd>歌迷、翻唱学习者、音乐内容爱好者</dd>
+          <dt>阅读方式</dt><dd>按栏目顺序浏览，或直接跳转 FAQ</dd>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 歌曲速览 -->
+  <section class="block" id="overview">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Overview</span>
+        <h2>歌曲速览：先弄清楚这首歌在讲什么</h2>
+        <p>很多听众第一次搜索“张碧晨 她说”，往往是想确认三件事：这首歌是什么类型、表达的是哪种情绪、以及有哪些值得一听的演绎版本。下面先把这几个问题讲清楚。</p>
+      </div>
+
+      <div class="overview">
+        <article class="article-card">
+          <h3>一首以“倾诉”为核心的抒情作品</h3>
+          <p>
+            《她说》属于华语流行中常见的抒情路线，歌词以第一人称或对话式的口吻展开，
+            把一段关系里的犹豫、坦白与不舍放在同一个叙事空间里。它的结构并不复杂，
+            重点在于情绪如何一层层推进，而不是靠强烈的节奏或转调制造记忆点。
+          </p>
+          <p>
+            张碧晨的演唱让这类作品的优势被放大：她的中低音区相对扎实，气息线条较长，
+            在处理长句和尾音时倾向于保留余韵，而不是把每个字都咬得很满。
+            这种处理方式让歌词里的“说”更像是真的在说，而不是在喊。
+          </p>
+          <p>
+            需要说明的是，同一首歌在不同场合、不同编曲下会呈现不同面貌。
+            现场版往往会加入更多即兴处理，录音版则更讲究整体的平衡感。
+            如果你是在寻找某一个特定版本，建议结合“版本对比”一节逐项确认。
+          </p>
+        </article>
+
+        <aside class="side-list">
+          <h3>这首歌值得关注的四个点</h3>
+          <ul>
+            <li>歌词的叙事视角接近日常对话，代入感强</li>
+            <li>旋律走向平缓，对气息稳定性要求较高</li>
+            <li>副歌情绪递进明显，是整首歌的记忆核心</li>
+            <li>不同版本的编曲差异，会直接影响听感</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 歌词意境 -->
+  <section class="block" id="lyric">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Lyric</span>
+        <h2>歌词意境：三个层次读懂这首歌的表达</h2>
+        <p>抒情歌曲的歌词通常不会只表达一种情绪。把它拆成几个层次来看，会比逐句翻译更容易理解创作者想传达的东西。</p>
+      </div>
+
+      <div class="lyric-grid">
+        <article class="lyric-card">
+          <span class="num">层次 01</span>
+          <h3>开口之前的犹豫</h3>
+          <p>歌曲开头往往处在一种“还没想好要不要说”的状态。语气偏轻、节奏偏缓，像是在心里反复斟酌措辞。这一层决定了整首歌的基调：不是控诉，而是坦白。</p>
+        </article>
+        <article class="lyric-card">
+          <span class="num">层次 02</span>
+          <h3>说出来时的坦白</h3>
+          <p>随着情绪推进，歌词进入更直接的表达。此时旋律线条略微上扬，咬字更清晰，情绪从自我对话转向面对对方。这是整首歌最容易让人产生共鸣的部分。</p>
+        </article>
+        <article class="lyric-card">
+          <span class="num">层次 03</span>
+          <h3>说完之后的留白</h3>
+          <p>结尾通常不会给出明确结论，而是保留一种未完成的余味。这种处理让歌曲听起来更像一段真实发生过的对话，而不是一个被精心包装的结论。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 演唱特点 -->
+  <section class="block feature-band" id="voice">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Voice</span>
+        <h2>演唱特点：为什么这类歌适合她来唱</h2>
+        <p>同一份旋律，交给不同歌手会得到完全不同的结果。张碧晨的演绎之所以被反复讨论，主要和下面几个技术处理有关。</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature">
+          <div class="icon">气</div>
+          <h3>气息绵长</h3>
+          <p>长句处理时保持稳定的气流输出，尾音不轻易断掉，让句子有完整的呼吸感。</p>
+        </div>
+        <div class="feature">
+          <div class="icon">声</div>
+          <h3>中低音扎实</h3>
+          <p>主歌部分多用中低音区铺垫，音色偏暖，适合承载叙事性较强的歌词。</p>
+        </div>
+        <div class="feature">
+          <div class="icon">情</div>
+          <h3>情绪递进清晰</h3>
+          <p>从克制到释放的过程有明确分界，副歌不会一上来就用力过猛，层次感较强。</p>
+        </div>
+        <div class="feature">
+          <div class="icon">字</div>
+          <h3>咬字克制</h3>
+          <p>不刻意强调每个字的力度，保留口语化的自然感，让歌词更像在对话。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 版本对比 -->
+  <section class="block" id="version">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Version</span>
+        <h2>版本对比：录音版、现场版与翻唱版怎么选</h2>
+        <p>同一首歌在不同场景下会呈现不同听感。下表从编曲、情绪和适用场景三个维度做横向对照，方便你按需求选择。</p>
+      </div>
+
+      <table class="version-table">
+        <thead>
+          <tr>
+            <th>版本类型</th>
+            <th>编曲特点</th>
+            <th>情绪呈现</th>
+            <th>适合场景</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>录音室版本</td>
+            <td>配器相对克制，人声位置靠前</td>
+            <td>整体平稳，细节清晰</td>
+            <td>安静环境下细听歌词与气息</td>
+          </tr>
+          <tr>
+            <td>现场演绎版本</td>
+            <td>乐队编制更完整，动态范围更大</td>
+            <td>起伏明显，即兴处理更多</td>
+            <td>想感受情绪张力和现场氛围</td>
+          </tr>
+          <tr>
+            <td>翻唱改编版本</td>
+            <td>编曲风格差异较大，可能更换速度或调性</td>
+            <td>取决于翻唱者的理解方向</td>
+            <td>对比不同演绎思路，寻找新鲜感</td>
+          </tr>
+          <tr>
+            <td>伴奏 / 纯音乐版本</td>
+            <td>保留和声框架，去除主唱声部</td>
+            <td>中性，留白多</td>
+            <td>练习翻唱、熟悉旋律走向</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 收听建议 -->
+  <section class="block" id="listen">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">Guide</span>
+        <h2>收听与翻唱建议：几个容易被忽略的细节</h2>
+        <p>无论是单纯欣赏还是准备翻唱，注意下面这几点，通常能获得更完整的理解。</p>
+      </div>
+
+      <div class="tips">
+        <div class="tip">
+          <div class="idx">1</div>
+          <div>
+            <h3>先听整体，再听细节</h3>
+            <p>第一遍不必逐句分析，先感受整首歌的情绪走向。第二遍再关注主歌与副歌之间的过渡处理。</p>
+          </div>
+        </div>
+        <div class="tip">
+          <div class="idx">2</div>
+          <div>
+            <h3>注意换气点的位置</h3>
+            <p>抒情歌的换气点往往决定了句子的完整性。模仿时可以留意原唱在哪里换气、哪里保持连贯。</p>
+          </div>
+        </div>
+        <div class="tip">
+          <div class="idx">3</div>
+          <div>
+            <h3>不要过度用力</h3>
+            <p>这类作品的难点在于“收”而不是“放”。副歌如果一开始就全力输出，后半段容易失去空间。</p>
+          </div>
+        </div>
+        <div class="tip">
+          <div class="idx">4</div>
+          <div>
+            <h3>选择适合自己音域的调</h3>
+            <p>翻唱时不必强行贴合原调。适当降调或升调，往往比硬撑高音更能保留歌曲的情绪表达。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker">FAQ</span>
+        <h2>常见问题</h2>
+        <p>整理了几个搜索“张碧晨 她说”时出现频率较高的问题，供快速查阅。</p>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary>《她说》是一首什么类型的歌？</summary>
+          <p>从整体风格看，它属于华语流行中的抒情类作品，旋律走向平缓，重点在歌词叙事和情绪递进，而不是强烈的节奏或高音炫技。</p>
+        </details>
+        <details>
+          <summary>为什么很多人关注张碧晨的演唱版本？</summary>
+          <p>主要与她的音色和气息处理方式有关。她的中低音区偏暖，长句处理稳定，咬字相对克制，这些特点与抒情歌曲的表达需求较为契合。</p>
+        </details>
+        <details>
+          <summary>想翻唱这首歌，需要注意什么？</summary>
+          <p>建议先确认自己的舒适音域，再决定是否调整调性。练习时重点放在换气位置和副歌的情绪控制上，避免一开始就用尽全力。</p>
+        </details>
+        <details>
+          <summary>不同版本之间的差别大吗？</summary>
+          <p>差别主要体现在编曲编制、人声位置和情绪处理上。录音版更均衡，现场版动态更大，翻唱版则取决于改编方向，听感差异会比较明显。</p>
+        </details>
+        <details>
+          <summary>在哪里可以听到这首歌？</summary>
+          <p>可通过主流正版音乐平台搜索相关曲目进行收听。由于版权归属和上架情况会随时间变化，具体可收听渠道请以平台实际显示为准。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>关于本页</h4>
+        <p>本页围绕张碧晨演唱的《她说》整理歌曲背景、歌词意境、演唱特点与版本对比等内容，供歌迷与翻唱爱好者参考。页面内容以作品欣赏与信息梳理为目的。</p>
+      </div>
+      <div>
+        <h4>栏目导航</h4>
+        <ul>
+          <li><a href="#overview">歌曲速览</a></li>
+          <li><a href="#lyric">歌词意境</a></li>
+          <li><a href="#voice">演唱特点</a></li>
+          <li><a href="#version">版本对比</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>延伸阅读</h4>
+        <ul>
+          <li><a href="#listen">收听与翻唱建议</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#overview">作品基本信息</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      内容仅用于作品介绍与欣赏参考，相关歌曲版权归权利人所有。
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 平滑滚动兜底：为不支持 scroll-behavior 的浏览器提供基础体验
+  document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    link.addEventListener('click', function(e){
+      var id = this.getAttribute('href');
+      if(id.length > 1){
+        var target = document.querySelector(id);
+        if(target){
+          e.preventDefault();
+          window.scrollTo({
+            top: target.getBoundingClientRect().top + window.pageYOffset - 76,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+  </html>
